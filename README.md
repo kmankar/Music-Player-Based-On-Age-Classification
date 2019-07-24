@@ -20,3 +20,13 @@ Source: https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/
 - Calls detection function. (Captured image sent as an argument)
 
 **There are separate m- Scripts for each function that is called.**
+
+# Functions called:
+
+- detection: Detects the face in the image captured. Displays error message if face not detected or multiple faces detected. Uses Canny Edge Detection for face detection and Viola - Jones Algorithm for feature extraction. Features extracted: Nose, Mouth, Eyes.
+- ratios: Calculates six types of ratios to distinguish between baby faces from other two older groups - young and old.
+- wrinkles: Wrinkle analysis targetting five regions - forehead, under the eyes, and cheek region.
+- classifier: Loads training data set and calls multiclassify.
+- multiclassify: Support Vector Machine alogrithm used to perform classification of image captured.
+- mapping_age: Maps age group predicted to respective songs.
+- audio_player: Plays songs from the generated playlist. User cans play, stop, pause and choose songs.
